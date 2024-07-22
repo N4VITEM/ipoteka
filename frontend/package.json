@@ -1,0 +1,52 @@
+{
+  "name": "frontend",
+  "private": true,
+  "scripts": {
+    "start": "tramvai start frontend",
+    "build": "tramvai build frontend",
+    "preview": "tramvai start-prod frontend",
+    "analyze": "tramvai analyze frontend",
+    "lint": "eslint --ext .ts,.tsx --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@tramvai/core": "^3.40.57",
+    "@tramvai/module-common": "^3.40.57",
+    "@tramvai/module-error-interceptor": "^3.40.57",
+    "@tramvai/module-render": "^3.40.57",
+    "@tramvai/module-router": "^3.40.57",
+    "@tramvai/module-seo": "^3.40.57",
+    "@tramvai/module-server": "^3.40.57",
+    "@tramvai/react": "^3.40.57",
+    "@tramvai/state": "^3.40.57",
+    "@tramvai/tokens-render": "^3.40.57",
+    "@tramvai/tokens-router": "^3.40.57",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tslib": "^2.6.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@tinkoff/eslint-config": "^4.1.1",
+    "@tinkoff/eslint-config-react": "^4.1.1",
+    "@tinkoff/eslint-plugin-tramvai": "^0.6.7",
+    "@tramvai/cli": "^3.40.57",
+    "@types/react": "^18.3.3",
+    "husky": "^4.3.8",
+    "lint-staged": "^15.2.7",
+    "postcss-custom-media": "^10.0.8",
+    "postcss-custom-properties": "^13.3.12",
+    "postcss-modules-values-replace": "^4.2.0",
+    "postcss-nested": "^6.2.0",
+    "prettier-config-tinkoff": "^0.2.4",
+    "typescript": "^5.5.3"
+  }
+}
