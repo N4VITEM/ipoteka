@@ -5,7 +5,7 @@
 </h1>
 
 ## Стек
-- Tramvai
+- React JS
 - Nest JS
 - TypeORM
 - GraphQL
