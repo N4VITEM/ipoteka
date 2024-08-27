@@ -1,10 +1,17 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { SequelizeConfigurationModule } from './Configuration/sequelize.module';
+import { FormulaModule } from './Modules/Formula.module';
+import { GraphQLConfigurationModule } from './Configuration/GraphQL.module';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    SequelizeConfigurationModule,
+    GraphQLConfigurationModule,
+    FormulaModule,
+  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
